@@ -1,31 +1,51 @@
 <% layout('layouts/boilerplate') -%>
 
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<section class="hero text-center py-5">
+  <h1 class="display-4 fw-bold">Welcome to WanderLust!</h1>
+  <p class="lead">Find the best vacation rentals around the world 🌍</p>
+  <a href="/listings" class="btn btn-primary btn-lg mt-3">Explore Listings</a>
+</section>
+
+<!-- Custom CSS -->
 <style>
-.hero-section {
-    background: linear-gradient(135deg, #fe424d 0%, #ff6b6b 100%);
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
     color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
+  .hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  }
 
-.hero-subtitle {
+  .hero p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+  }
+
+  .hero .btn-primary {
+    background-color: #ff6b6b;
+    border: none;
+    padding: 12px 28px;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
 
+  .hero .btn-primary:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+  }
 </style>
 
-<div class="hero-section">
-    <div class="container">
-        <h1 class="hero-title">Welcome to WanderLust</h1>
-        <p class="hero-subtitle">Find your perfect place to stay around the world</p>
-    </div>
-</div>
+
 
