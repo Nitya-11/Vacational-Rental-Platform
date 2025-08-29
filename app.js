@@ -107,7 +107,7 @@ app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
 
 app.get("/", (req, res) => {
-    res.send("Server is running on Render! Go to /listings to view listings.");
+    res.render("landing.ejs");
 });
 
 app.use((err, req, res, next) => {
