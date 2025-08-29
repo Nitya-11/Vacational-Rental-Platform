@@ -2,46 +2,39 @@
 
 <style>
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #fe424d 0%, #ff6b6b 100%);
     color: white;
-    padding: 6rem 0;
+    padding: 4rem 0;
     text-align: center;
-    margin-top: -1.5rem;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn-primary-custom {
-    background-color: #fe424d;
+.btn-custom {
+    background-color: white;
+    color: #fe424d;
     border: none;
     padding: 0.8rem 2rem;
-    border-radius: 50px;
+    border-radius: 25px;
     font-weight: 600;
+    margin: 0.5rem;
     transition: all 0.3s ease;
 }
 
-.btn-primary-custom:hover {
-    background-color: #e63946;
+.btn-custom:hover {
+    background-color: #f8f9fa;
+    color: #fe424d;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(254, 66, 77, 0.3);
 }
 
 .btn-outline-custom {
@@ -49,196 +42,60 @@
     border: 2px solid white;
     color: white;
     padding: 0.8rem 2rem;
-    border-radius: 50px;
+    border-radius: 25px;
     font-weight: 600;
+    margin: 0.5rem;
     transition: all 0.3s ease;
 }
 
 .btn-outline-custom:hover {
     background-color: white;
-    color: #667eea;
-    transform: translateY(-2px);
+    color: #fe424d;
 }
 
 .features-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
     background-color: #f8f9fa;
 }
 
 .feature-card {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
 }
 
 .feature-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fe424d;
     margin-bottom: 1rem;
 }
 
 .feature-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
 .feature-description {
     color: #666;
-    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
-.stats-section {
-    background: linear-gradient(135deg, #fe424d 0%, #ff6b6b 100%);
-    color: white;
-    padding: 4rem 0;
+.cta-section {
+    padding: 3rem 0;
     text-align: center;
-}
-
-.stat-item {
-    margin: 1rem 0;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    display: block;
-}
-
-.stat-label {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn-primary-custom,
-    .btn-outline-custom {
-        width: 200px;
-    }
+    background-color: white;
 }
 </style>
 
 <div class="hero-section">
     <div class="container">
         <h1 class="hero-title">Welcome to WanderLust</h1>
-        <p class="hero-subtitle">Discover amazing places to stay around the world</p>
-        <div class="cta-buttons">
-            <a href="/listings" class="btn btn-primary-custom">
-                <i class="fas fa-search me-2"></i>Explore Listings
-            </a>
-            <% if(!currUser) { %>
-            <a href="/signup" class="btn btn-outline-custom">
-                <i class="fas fa-user-plus me-2"></i>Join Now
-            </a>
-            <% } else { %>
-            <a href="/listings/new" class="btn btn-outline-custom">
-                <i class="fas fa-plus me-2"></i>Add Your Place
-            </a>
-            <% } %>
-        </div>
+        <p class="hero-subtitle">Find your perfect place to stay around the world</p>
     </div>
 </div>
 
-<div class="features-section">
-    <div class="container">
-        <div class="row text-center mb-5">
-            <div class="col-12">
-                <h2 class="display-5 fw-bold">Why Choose WanderLust?</h2>
-                <p class="lead text-muted">Your trusted platform for finding the perfect accommodation</p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3 class="feature-title">Global Destinations</h3>
-                    <p class="feature-description">Explore unique accommodations in destinations around the world, from cozy cabins to luxury villas.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="feature-title">Verified Reviews</h3>
-                    <p class="feature-description">Read authentic reviews from real travelers to make informed decisions about your stay.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Secure Booking</h3>
-                    <p class="feature-description">Book with confidence knowing your information is protected with industry-standard security.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="stats-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="stat-item">
-                    <span class="stat-number">1000+</span>
-                    <span class="stat-label">Listings</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Countries</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-item">
-                    <span class="stat-number">10K+</span>
-                    <span class="stat-label">Happy Travelers</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-item">
-                    <span class="stat-number">4.8</span>
-                    <span class="stat-label">Average Rating</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container py-5">
-    <div class="row text-center">
-        <div class="col-12">
-            <h3 class="mb-4">Ready to Start Your Journey?</h3>
-            <a href="/listings" class="btn btn-primary-custom btn-lg">
-                <i class="fas fa-rocket me-2"></i>Get Started
-            </a>
-        </div>
-    </div>
-</div>
