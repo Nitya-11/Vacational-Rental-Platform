@@ -106,8 +106,8 @@ app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
 
-app.listen(8080, () => {
-    console.log("server is listening to port 8080");
+app.get("/", (req, res) => {
+    res.send("Server is running on Render! Go to /listings to view listings.");
 });
 
 app.use((err, req, res, next) => {
